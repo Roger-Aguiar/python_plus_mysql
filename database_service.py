@@ -1,7 +1,6 @@
 # Name:         Roger Silva Santos Aguiar
 # Function:     This module implements all the operations with the database
-# Initial date: July 22,4
-# 2020
+# Initial date: July 22, 2020
 # Last update:  July 22, 2020
 
 # Required modules

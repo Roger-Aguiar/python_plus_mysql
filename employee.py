@@ -61,27 +61,47 @@ class Employee:
         print("The row was successfully updated!")
 
     def delete_employee(self):
-        pass
+        sql = "DELETE FROM EMPLOYEE WHERE Ssn = %s"
+        ssn = ('987321654',)
 
-    def employee_menu(self):
-        pass
+        print("Are you sure that you want to delete this row? \n")
+        print("1 - Yes")
+        print("2 - No")
+
+        operation_option = int(input("Choose an option: "))
+
+        if operation_option == 1:
+            self.employees.execute(sql, ssn)
+            self.mydb.commit()
+            print("The row was successfully deleted!")
+        else:
+            print("End operation.")
+
+    def display_options(self):
+        print("\n*************************************************************Menu"
+              "*************************************************************")
+        print("1 - Show employees")
+        print("2 - Insert a new employee")
+        print("3 - Update Employee")
+        print("4 - Delete Employee")
+        print("5 - Exit")
 
 
 if __name__ == '__main__':
     employee = Employee()
-
-    print("1 - Show employees")
-    print("2 - Insert a new employee")
-    print("3 - Update Employee")
-    print("4 - Exit")
+    employee.display_options()
 
     option = int(input("\nChoose an option: "))
 
-    if option == 1:
-        employee.show_employees()
-    elif option == 2:
-        employee.insert_employee()
-    elif option == 3:
-        employee.update_employee()
-    elif option == 4:
-        print("End program.")
+    while option != 5:
+        if option == 1:
+            employee.show_employees()
+        elif option == 2:
+            employee.insert_employee()
+        elif option == 3:
+            employee.update_employee()
+        elif option == 4:
+            employee.delete_employee()
+
+        employee.display_options()
+        option = int(input("\nChoose an option: "))

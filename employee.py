@@ -14,20 +14,9 @@ class Employee:
         sql = 'SELECT * FROM EMPLOYEE'
         self.database.select(sql)
 
-    def insert_employee(self):
+    def insert_employee(self, values):
         sql = "INSERT INTO EMPLOYEE " \
               "VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
-        f_name = 'Tom'
-        m_init = 'S'
-        l_name = 'Aguiar'
-        ssn = '987321654'
-        b_date = '2019-11-01'
-        address = '222 Piauí, Tupanuára, MG'
-        sex = 'M'
-        salary = 10000
-
-        values = (f_name, m_init, l_name, ssn, b_date, address, sex, salary)
-
         self.database.insert(sql, values)
 
     def update_employee(self):

@@ -1,7 +1,7 @@
 # Name:         Roger Silva Santos Aguiar
 # Function:     This module implements all the operations with the database
 # Initial date: July 22, 2020
-# Last update:  July 22, 2020
+# Last update:  July 23, 2020
 
 # Required modules
 import database_config
@@ -16,8 +16,13 @@ class DatabaseService:
         self.database.execute(sql)
         table = self.database.fetchall()
 
-        for row in table:
-            print(row)
+        return table
+
+    def select_by_id(self, sql, id_row):
+        self.database.execute(sql, id_row)
+        table = self.database.fetchone()
+
+        return table
 
     def insert(self, sql, values):
         self.database.execute(sql, values)

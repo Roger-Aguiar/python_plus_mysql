@@ -4,7 +4,7 @@
 # Last update:  July 23, 2020
 
 # Required modules
-import database_service
+from Database import database_service
 
 
 class Employee:

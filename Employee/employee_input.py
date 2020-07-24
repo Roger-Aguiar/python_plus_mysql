@@ -1,10 +1,10 @@
 # Name:         Roger Silva Santos Aguiar
 # Function:     This module gets the employee data from the user.
 # Initial date: July 22,2020
-# Last update:  July 23,2020
+# Last update:  July 24,2020
 
 # Required modules
-import employee
+from Employee import employee
 
 
 class EmployeeData:
@@ -105,11 +105,12 @@ class EmployeeData:
             print(current_row)
         print("-----------------------------------------------------------------------------------------------------------------------------")
 
+    def options(self):
+        print("\n***********************************************************************EMPLOYEE**********************************************************************")
+        print("1 - Insert employee")
+        print("2 - Update employee")
+        print("3 - Delete employee")
+        print("4 - Show employes")
+        print("5 - Exit")
+        print("*******************************************************************************************************************************************************")
 
-if __name__ == '__main__':
-    input_employee = EmployeeData()
-
-    # input_employee.insert()
-    # input_employee.get_table()
-    # input_employee.update()
-    # input_employee.delete()

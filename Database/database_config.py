@@ -1,7 +1,7 @@
 # Name:         Roger Silva Santos Aguiar
 # Function:     Database settings.
 # Initial date: July 21, 2020
-# Last update:  July 21, 2020
+# Last update:  July 24, 2020
 
 # Required module
 import mysql.connector
